@@ -96,6 +96,7 @@ export default function Home() {
       <Link href="/about">Go to About</Link> 
       <Link href="/contact">Go to Contact</Link> 
       <Link href="/dashboard">Go to Dashboard</Link> 
+      <Link href="/products">Go to Products</Link> 
       <p className="text-3xl">
         Home Page 1
       </p>
