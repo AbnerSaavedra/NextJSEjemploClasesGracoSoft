@@ -1,14 +1,16 @@
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 export default async function ProductsPage() {
-  const response = await fetch('https://ve.dolarapi.com/v1/dolares');
+  const response = await fetch('https://api.restful-api.dev/objects');
   const products = await response.json();
   console.log("Reponse: ", response, products)
 
   return (
-    <ul>
+    <ul className='list-group'>
       {products.map((product) => (
-        <li key={product.id}>
-          <h2>{product.fuente}</h2>
-          <p>{product.promedio}</p>
+        <li key={product.id} className='list-group-item'>
+          <h5>{product.name}</h5>
+          <p>{product.data?.color}</p>
         </li>
       ))}
     </ul>
