@@ -43,7 +43,9 @@ export default function RootLayout({ children }) {
           </div>
         </nav>
         <h1>Hola mundo</h1>
-        {children}
+        <div className="d-flex justify-content-center">
+          {children}
+        </div>
       </body>
     </html>
   );

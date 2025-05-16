@@ -1,4 +1,4 @@
-import 'bootstrap/dist/css/bootstrap.min.css';
+
 
 export default async function ProductsPage() {
   const response = await fetch('https://api.restful-api.dev/objects');
