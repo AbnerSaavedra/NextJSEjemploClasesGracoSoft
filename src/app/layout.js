@@ -1,5 +1,6 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import Link from 'next/link';
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -20,6 +21,27 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
+        <nav className="navbar navbar-expand-lg navbar-light bg-light">
+          <div className="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul className="navbar-nav mr-auto">
+              <li className="nav-item active">
+                <Link className="nav-link" href="/">Home</Link>
+              </li>
+              <li className="nav-item">
+                <Link className="nav-link" href="/about">About </Link> 
+              </li>
+              <li className="nav-item">
+                <Link className="nav-link" href="/contact">Contact </Link> 
+              </li>
+              <li className="nav-item">
+                <Link className="nav-link" href="/dashboard">Dashboard </Link> 
+              </li>
+              <li className="nav-item">
+                <Link className="nav-link" href="/products">Products </Link>
+              </li>
+            </ul>
+          </div>
+        </nav>
         <h1>Hola mundo</h1>
         {children}
       </body>
